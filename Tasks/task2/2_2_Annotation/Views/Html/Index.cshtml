@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div>
+    <label>Batool </label>
+    <br />
+    @Html.Label("name","Your Name:")
+    @Html.TextBox("name")
+
+    <br />
+    <br />
+
+    @Html.Label("password","Your Password:")
+    @Html.Password("password")
+    <br />
+    <br />
+    @Html.Label("com","Your Comments:")
+    @Html.TextArea("com","batool", 5, 12, null)
+</div>
+
