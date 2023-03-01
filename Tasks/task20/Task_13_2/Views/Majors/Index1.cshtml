@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Task_13_2.Models.Major>
+
+@{
+    ViewBag.Title = "Index1";
+}
+
+<h2>Index1</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+    <div class="bg-white text-center h-100 p-4 p-xl-5">
+       
+            @foreach (var item in Model)
+            {
+
+                <img class="img-fluid mb-4" src="~/batool/img/icon-3.png" alt="">
+                <h4 class="mb-3"> @item.Name_Major</h4>
+                <p class="mb-4">@item.Description_Major</p>
+                <a class="btn btn-outline-primary border-2 py-2 px-4 rounded-pill" href="">Read More</a>
+
+            }
+    </div>
+</div>
+

@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- //API -->
+    <select id="select" onchange="onch()">
+    </select>
+
+    <img id="image" src="">
+
+    <script>
+
+
+
+
+        async function InfoOfUsers() {
+
+
+            var x = document.getElementById("name");
+            console.log(x);
+
+            const name = await fetch("https://www.breakingbadapi.com/api/characters");
+            // console.log(name);
+            const convert = await name.json();
+            //  console.log(convert);
+            for (let i = 0; i < convert.length; i++) {
+
+
+                document.getElementById("select").innerHTML += `<option > ${convert[i].name} </option>`;
+
+
+
+                // var y = document.getElementById("select").checked;
+                // console.log(y);
+
+                // document.getElementById("image").src=convert[i].img;
+
+
+
+
+                // document.writeln(`<img src="${convert[i].img}" width="200px">`);
+
+
+            }
+
+        }
+
+
+        InfoOfUsers();
+        async function onch() {
+
+
+
+            const name = await fetch("https://www.breakingbadapi.com/api/characters");
+            //console.log(name);
+            const convert = await name.json();
+            //  console.log(convert);
+            for (let i = 0; i < convert.length; i++) {
+
+                let value = document.getElementById("select").value;
+                // console.log(value);
+                if (value == convert[i].name)
+                    document.getElementById("image").src = convert[i].img;
+            }
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

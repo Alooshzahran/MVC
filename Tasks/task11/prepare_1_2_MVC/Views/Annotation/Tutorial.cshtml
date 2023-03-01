@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Tutorial";
+}
+
+<br />
+<br />
+
+<h2>Tutorial</h2>
+
+<div>
+    <form action="SaveUser" method="post">
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Id</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="Id">
+
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Name</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" name="Name">
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Age</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" name="Age">
+        </div>
+        <div class="mb-3 form-check">
+
+        </div>
+        <br />
+        <br />
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    @Html.ValidationSummary()
+</div>

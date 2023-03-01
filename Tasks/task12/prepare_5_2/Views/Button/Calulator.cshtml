@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Calulator";
+}
+
+<h2>Calulator</h2>
+
+
+@{ 
+    int mul = 1;
+    for(int i=1;i<= ViewBag.id; i++)
+    {
+        mul *= i;
+    }
+    // return (mul);
+}
+
+
+<label>@mul</label>

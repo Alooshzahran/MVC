@@ -1,0 +1,18 @@
+﻿@*@model prepare_1_2_MVC.Models.category*@
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div>
+    <ul>
+        @foreach (var employe in Model)
+        {
+           // <li>  @Html.ActionLink(employe.Name, "details", new { id = employe.employeid })</li>
+
+        }
+    </ul>
+</div>
+

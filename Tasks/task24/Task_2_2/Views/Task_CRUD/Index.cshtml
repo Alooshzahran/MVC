@@ -1,0 +1,115 @@
+﻿@model IEnumerable<Task_2_2.Task_CRUD>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<div class="form-group">
+    <div class="input-group">
+        @using (Html.BeginForm("Index", "Task_CRUD", FormMethod.Get))
+        {
+            <input type="text" class="form-control" placeholder="Search by name or job title" name="searchString" value="@ViewBag.CurrentFilter" />
+            <div class="input-group-append">
+                <button class="btn btn-secondary" type="submit">
+                    Search
+                </button>
+
+            </div>
+            <div class="form-group">
+                <div class="form-check form-check-inline">
+                    @Html.RadioButton("searchBy", "First Name", false, new { @class = "form-check-input" })
+                    <label class="form-check-label" for="firstNameRadio">First Name</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    @Html.RadioButton("searchBy", "Last Name", false, new { @class = "form-check-input" })
+                    <label class="form-check-label" for="lastNameRadio">Last Name</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    @Html.RadioButton("searchBy", "Email", false, new { @class = "form-check-input" })
+                    <label class="form-check-label" for="emailRadio">Email</label>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+<table class="table table-hover table-striped">
+    <tr>
+        <th>
+            First Name
+        </th>
+        <th>
+            Last Name
+        </th>
+        <th>
+            Email
+        </th>
+        <th>
+            Phone
+        </th>
+        <th>
+            Age
+        </th>
+        <th>
+            Job Title
+        </th>
+        <th>
+            Gender
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.farst_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Last_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Age)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Job_Title)
+            </td>
+            <td>
+                @if (item.Gender == true)
+                {
+                    <span>Male</span>
+                }
+                else
+                {
+                    <span>Female</span>
+                }
+
+                @*@Html.DisplayFor(modelItem => item.Gender)*@
+            </td>
+
+            <td>
+                <img src="../image/@item.image" style="width:100px;" />
+                @*//  <img src="../image/@item.image" width="50" height="50" />*@
+            </td>
+            <td>
+                <a href="Download?CV=@item.CV">@item.CV</a>
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>

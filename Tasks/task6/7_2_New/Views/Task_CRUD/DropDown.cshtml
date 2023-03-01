@@ -1,0 +1,11 @@
+﻿
+
+@{ 
+
+    List<SelectListItem> l1 = new List<SelectListItem>();
+
+    l1.Add(new SelectListItem() { Text = "Apple", Value = "20" });
+    l1.Add(new SelectListItem() { Text = "Orange", Value = "20" });
+
+}
+@Html.DropDownList("FruitList" ,ViewBag.fruit as SelectList ,"select any Name")

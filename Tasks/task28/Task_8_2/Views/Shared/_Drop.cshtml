@@ -1,0 +1,9 @@
+﻿
+@model IEnumerable<Task_8_2.Product>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+
+@Html.DropDownList("Fruit", ViewBag.m as SelectList, "select Item")

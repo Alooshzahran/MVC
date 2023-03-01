@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm("button", "button1", FormMethod.Post))
+{<!-- Email input -->
+    <div class="form-outline mb-4">
+        <input type="number" id="form2Example1" class="form-control" name="id" />
+        <label class="form-label" for="form2Example1">Id</label>
+    </div>
+
+    <!-- Password input -->
+    <div class="form-outline mb-4">
+        <input type="text" id="form2Example2" class="form-control" name="Name" />
+        <label class="form-label" for="form2Example2">Name</label>
+    </div>
+
+    <div class="form-outline mb-4">
+        <input type="text" id="form2Example2" class="form-control" name="Age" />
+        <label class="form-label" for="form2Example2">Age</label>
+    </div>
+
+    <!-- 2 column grid layout for inline styling -->
+    <!-- Submit button -->
+    <button type="submit" value="submit">show detail</button>
+
+    <!-- Register buttons -->
+
+}

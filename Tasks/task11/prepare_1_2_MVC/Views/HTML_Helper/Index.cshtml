@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@Html.Label("Your Name" ,"Name")
+@Html.TextBox("Your Name", "Batool", new { Style = "color:red" });
+
+<br />
+@Html.Label("Your Password","Password")
+@Html.Password("Your Password")
+
+<br />
+@Html.Label("Comments","Comments")
+@Html.TextArea("Comments","",5,12,null)

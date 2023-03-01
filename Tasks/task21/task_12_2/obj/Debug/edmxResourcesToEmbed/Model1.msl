@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MVCModelStoreContainer" CdmEntityContainer="MVCEntities">
+    <EntitySetMapping Name="Courses">
+      <EntityTypeMapping TypeName="MVCModel.Cours">
+        <MappingFragment StoreEntitySet="Courses">
+          <ScalarProperty Name="IdCourse" ColumnName="IdCourse" />
+          <ScalarProperty Name="CourseName" ColumnName="CourseName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Student_Courses">
+      <EntityTypeMapping TypeName="MVCModel.Student_Courses">
+        <MappingFragment StoreEntitySet="Student_Courses">
+          <ScalarProperty Name="FK_Student" ColumnName="FK_Student" />
+          <ScalarProperty Name="Fk_Course" ColumnName="Fk_Course" />
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Students">
+      <EntityTypeMapping TypeName="MVCModel.Student">
+        <MappingFragment StoreEntitySet="Students">
+          <ScalarProperty Name="IdStudent" ColumnName="IdStudent" />
+          <ScalarProperty Name="StudentName" ColumnName="StudentName" />
+          <ScalarProperty Name="StudentDescription" ColumnName="StudentDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

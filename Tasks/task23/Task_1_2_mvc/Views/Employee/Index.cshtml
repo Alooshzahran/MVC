@@ -1,0 +1,36 @@
+﻿
+@*@model Task_1_2_mvc.Models.Employee*@
+
+
+<h2 style="text-align:center; color:blue;">Student</h2>
+
+<br />
+<br />
+<table class="table table-striped table-hover">
+
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Major</td>
+            <td>Faculty</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+
+
+            <tr>
+
+                <td>@item.ID</td>
+                <td>@item.Name</td>
+                <td>@item.Major</td>
+                <td>@item.Faculty</td>
+            </tr>
+
+
+        }
+
+    </tbody>
+</table>

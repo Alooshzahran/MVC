@@ -1,0 +1,50 @@
+﻿
+
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            product Name
+            @*@Html.DisplayNameFor(model => model.ProductName)*@
+        </th>
+        <th>
+            Stock
+            @*@Html.DisplayNameFor(model => model.Stock)*@
+        </th>
+        <th>
+            Category Name
+            @*@Html.DisplayNameFor(model => model.Category.CategoryName)*@
+        </th>
+        <th></th>
+    </tr>
+
+   
+        <tr>
+            <td>
+               @Model.Id
+            </td>
+            <td>
+                @Model.First_Name
+            </td>
+            <td>
+                @Model.Last_Name
+            </td>
+            <td>
+                @Html.ActionLink("Update", "Update", new { id = Model.Id }, new { @class = "btn btn-success" }) |
+                @Html.ActionLink("Details", "Details", new { id = Model.Id }, new { @class = "btn btn-warning" }) |
+                @Html.ActionLink("Delete", "Delete", new { id = Model.Id }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    
+
+</table>
